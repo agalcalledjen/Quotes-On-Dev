@@ -1,6 +1,33 @@
+/* Small devices (phones, 620px and down) */
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+/* Medium devices (portrait tablets and large phones, 620px and up) */
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+/* Large devices (large laptops and desktops, 1080px and up) */
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin flex($flex-drtn: column, $justify: center, $align: center) {
+  flex-direction: $flex-drtn;
+  justify-content: $justify;
+  align-items: $align;
+}
+
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

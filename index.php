@@ -10,28 +10,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+    <?php 
+    if ( have_posts() ) :
+      
+      while( have_posts() ): the_post();
+        // if we do have blog posts, we want this condition to run
+        // get template-parts > content.php
+        get_template_part( 'template-parts/content' );
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+      endwhile;
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+    else: 
+      // else get template-parts/content > content-none.php
+      get_template_part( 'template-parts/content', 'none' );
 
-				<?php get_template_part( 'template-parts/content' ); ?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+		endif; 
+    ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

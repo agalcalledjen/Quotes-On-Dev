@@ -1,3 +1,51 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Exo Web';
+  src: url('../../assets/fonts/Exo-Light.eot');
+  src: url('../../assets/fonts/Exo-Light.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Exo-Light.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-Light.woff') format('woff'),
+    url('../../assets/fonts/Exo-Light.ttf') format('truetype'),
+    url('../../assets/fonts/Exo-Light.svg#Exo-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo Web Bold';
+  src: url('../../assets/fonts/Exo-Medium.eot');
+  src: url('../../assets/fonts/Exo-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Exo-Medium.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-Medium.woff') format('woff'),
+    url('../../assets/fonts/Exo-Medium.ttf') format('truetype'),
+    url('../../assets/fonts/Exo-Medium.svg#Exo-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo Italic';
+  src: url('../../assets/fonts/Exo-LightItalic.eot');
+  src: url('../../assets/fonts/Exo-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Exo-LightItalic.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-LightItalic.woff') format('woff'),
+    url('../../assets/fonts/Exo-LightItalic.ttf') format('truetype'),
+    url('../../assets/fonts/Exo-LightItalic.svg#Exo-LightItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Exo Italic Bold';
+  src: url('../../assets/fonts/Exo-MediumItalic.eot');
+  src: url('../../assets/fonts/Exo-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Exo-MediumItalic.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-MediumItalic.woff') format('woff'),
+    url('../../assets/fonts/Exo-MediumItalic.ttf') format('truetype'),
+    url('../../assets/fonts/Exo-MediumItalic.svg#Exo-MediumItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}

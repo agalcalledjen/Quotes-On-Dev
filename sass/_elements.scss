@@ -15,12 +15,15 @@ html {
 }
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__background-body;
+  /* Fallback for when there is no custom background color defined. */
+  margin: 0 auto;
+  padding: $base__space-unit * 2.5 $base__space-unit / 2;
 }
 
 blockquote,
 q {
-  quotes: '' '';
+  quotes: '''';
 
   &:before,
   &:after {
@@ -48,8 +51,8 @@ ol {
   list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
   margin-bottom: 0;
   margin-left: $base__space-unit;
 }
@@ -63,8 +66,10 @@ dd {
 }
 
 img {
-  height: auto; /* Make sure images are scaled correctly. */
-  max-width: 100%; /* Adhere to container width. */
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
 }
 
 table {
