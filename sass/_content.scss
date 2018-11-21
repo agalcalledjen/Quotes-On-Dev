@@ -9,6 +9,11 @@
   width: 300px;
 }
 
+/* Footer */
+.site-footer {
+  margin-top: $base__space-unit * 3;
+}
+
 
 /* Posts and pages */
 
@@ -17,7 +22,7 @@
 }
 
 .hentry {
-  margin: 0 0 $base__space-unit;
+  margin: $base__space-unit * 1.7 0 $base__space-unit;
 }
 
 .updated:not(.published) {
@@ -38,4 +43,25 @@
 .page-links {
   clear: both;
   margin: 0 0 $base__space-unit;
+}
+
+.entry-meta {
+  display: flex;
+  align-items: baseline;
+
+  .entry-title {
+    margin: 0;
+  }
+
+  .source {
+    font-size: $font__size * 1.25;
+    font-family: $font__accent;
+  }
+}
+
+/* About Page - about.php */
+.page-template-about .entry-content {
+  p {
+    font-size: $font__size;
+  }
 }

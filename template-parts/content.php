@@ -24,11 +24,11 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 
   <div class="entry-meta">
   <!-- &mdash: hyphen -->
-    <?php the_title( '<h2 class="entry-tite">&mdash; ', '</h2>' ); ?>
+    <?php the_title( '<h2 class="entry-title">&mdash; ', '</h2>' ); ?>
 
     <?php if( $source && $source_url ): ?>
     <!-- if both exist -->
-      <span class="source">, <a href="<?php echo $source_url; ?>"><?php echo $source; ?></a></span>
+      <span class="source">, <a href="<?php echo $source_url; ?>" target="_blank"><?php echo $source; ?></a></span>
     <?php elseif( $source ): ?>
     <!-- if only source exists -->
       <span class="source">, <?php echo $source; ?></span>

@@ -32,15 +32,17 @@ a {
 
 .main-navigation {
   clear: both;
-  display: block;
+  // display: block;
   float: left;
   width: 100%;
 
   ul {
-    display: none;
+    // display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
+    margin: 1rem 0;
+    display: flex;
 
     ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -61,6 +63,7 @@ a {
         &.focus>ul {
           left: 100%;
         }
+
       }
 
       a {
@@ -83,9 +86,23 @@ a {
   li {
     float: left;
     position: relative;
+    padding-right: $base__space-unit / 2;
+    display: flex;
 
     &:hover>a,
     &.focus>a {}
+
+    &:before {
+      content: "\007c";
+      display: inline-flex;
+      margin-right: $base__space-unit / 2;
+    }
+
+    &:first-child:before {
+      content: "";
+      display: none;
+    }
+
   }
 
   a {
@@ -99,7 +116,10 @@ a {
 }
 
 /* Small menu. */
-.menu-toggle,
+.menu-toggle {
+  display: none;
+}
+
 .main-navigation.toggled ul {
   display: block;
 }

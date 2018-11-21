@@ -19,18 +19,23 @@ input[type="submit"] {
   line-height: 1;
   padding: $base__space-unit / 2 $base__space-unit * 1.5;
   /* text-shadow: 0 1px 0 hsla(0,0%,100%,.8); */
+  margin-top: $base__space-unit;
 
-  &:hover {
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
     color: $color__link-hover;
     border-color: $color__link-hover;
     // box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
   }
 
-  &:active,
-  &:focus {
-    border-color: #aaa #bbb #bbb;
-    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-  }
+  // &:active,
+  // &:focus {
+  //   border-color: $;
+  //   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  // }
 }
 
 /* Fields */
