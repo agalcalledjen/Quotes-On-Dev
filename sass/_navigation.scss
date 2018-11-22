@@ -144,11 +144,13 @@ a {
   }
 
   .nav-previous {
+    display: none;
     float: left;
     width: 50%;
   }
 
   .nav-next {
+    display: none;
     float: right;
     text-align: right;
     width: 50%;

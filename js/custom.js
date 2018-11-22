@@ -6,8 +6,6 @@
 
   $(document).ready(function () {
 
-
-
     // get a random post and append content to the DOM
     $('#new-quote-btn').on('click', function (event) {
       event.preventDefault();
@@ -36,12 +34,6 @@
         console.log(data[0]._qod_quote_source);
         console.log(data[0]._qod_quote_source_url);
 
-        // filter out articles with pictures and only show 12 of them
-        // let articles = data.results.filter((item) => {
-        //   return item.multimedia.length > 4;
-        // }).slice(0, 12);
-
-        // loop thru each article and add the following
         $('.post').empty();
 
         $('.post').append(
@@ -55,19 +47,12 @@
           </div>`);
 
         if (data[0]._qod_quote_source_url.length > 0) {
-          $('.source').append(`,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`);
+          $('.source').append(`&nbsp;,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`);
+        } else if (data[0]._qod_quote_source.length > 0) {
+          $('.source').append(`&nbsp;, ${data[0]._qod_quote_source}`);
         } else {
           $('.source').append(data[0]._qod_quote_source);
         }
-
-        // loop thru each article and add the following
-        // $('.entry-content').empty();
-        // $('.entry-content').append(`${data[0].content.rendered}`);
-
-        // $('.entry-meta').empty();
-        // $('.entry-meta').append(`<h2 class="entry-title">${data[0].title.rendered}</h2>`);
-
-
 
       }).fail(function (err) {
         // Append a message for the user or alert a message saying something went wrong

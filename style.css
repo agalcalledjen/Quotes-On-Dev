@@ -274,6 +274,9 @@ h5,
 h6 {
   clear: both; }
 
+h1 {
+  margin-top: 2.625rem; }
+
 h2 {
   font-size: 1.25rem;
   font-weight: 300; }
@@ -542,12 +545,14 @@ a {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
+  display: none;
   float: left;
   width: 50%; }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
+  display: none;
   float: right;
   text-align: right;
   width: 50%; }
@@ -644,22 +649,47 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
-.entry-meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline; }
-  .entry-meta .entry-title {
-    margin: 0; }
-  .entry-meta .source {
-    font-size: 20px;
-    font-family: "Exo Italic", sans-serif; }
+.entry-meta .entry-title {
+  margin: 0;
+  display: inline; }
+
+.entry-meta .source {
+  font-size: 20px;
+  font-family: "Exo Italic", sans-serif;
+  word-break: keep-all; }
 
 /* About Page - about.php */
 .page-template-about .entry-content p {
   font-size: 16px; }
+
+/* Archives Page - page-archives.php */
+.post-archives h2,
+.cat-archives h2,
+.tag-archives h2 {
+  margin-top: 2.85rem;
+  font-size: 24px;
+  font-family: "Exo Web Bold", sans-serif; }
+
+.post-archives ul,
+.cat-archives ul,
+.tag-archives ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 2; }
+  .post-archives ul li,
+  .cat-archives ul li,
+  .tag-archives ul li {
+    margin-right: 1.125rem; }
+
+.page .site-footer {
+  margin-top: 5.25rem;
+  margin-bottom: 1.5rem; }
 
 /*--------------------------------------------------------------
 # Media
