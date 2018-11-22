@@ -125,9 +125,27 @@
 }
 
 /* Search - search.php */
-.search-results {
-  .page-header {
-    border-bottom: $border__dashed;
+.search-results .site-content {
+  .content-area {
+    .site-main {
+      .page-header {
+        border-bottom: $border__dashed;
+      }
+
+      .post {
+        .entry-header {
+          .entry-title {
+            font-family: $font__button;
+          }
+        }
+
+        .entry-summary {
+          p {
+            font-size: $font__size;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -143,9 +161,6 @@
   }
 
   .quote-submission-wrapper {
-
-
-
 
     form {
       div {

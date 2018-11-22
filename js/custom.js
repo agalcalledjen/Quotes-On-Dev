@@ -120,9 +120,11 @@
           xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
         }
       }).done(function (response) {
+        console.log(response);
         // 1. slideUp the form
         // 2. append a success msg
-        console.log(response);
+        $('#quote-submission-form').slideUp('slow');
+        $('.quote-submission').append('<br>Thanks, your quote submission was received!');
       }).fail(function () {
         // output a msg to the user saying sth went wrong
         console.log('something went wrong');
