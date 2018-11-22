@@ -40,6 +40,12 @@ p {
   font-size: 1.25rem;
 }
 
+.error404 {
+  p {
+    font-size: $font__size;
+  }
+}
+
 dfn,
 cite,
 em,

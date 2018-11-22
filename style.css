@@ -286,6 +286,9 @@ p {
   margin-bottom: 1.5rem;
   font-size: 1.25rem; }
 
+.error404 p {
+  font-size: 16px; }
+
 dfn,
 cite,
 em,
@@ -434,15 +437,19 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  border: 1px solid #00cc00;
+  border-width: 2px;
+  border-radius: 3px;
+  background: #222; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #fff;
+    border-color: #fff9c0;
+    outline: 0; }
 
 input[type="text"],
 input[type="email"],
@@ -690,6 +697,58 @@ a {
 .page .site-footer {
   margin-top: 5.25rem;
   margin-bottom: 1.5rem; }
+
+/* 404 Page - 404.php */
+.error404 h1 {
+  margin-top: 1.5rem; }
+
+.error404 .search-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+  .error404 .search-form fieldset .search-field {
+    width: 250px;
+    padding: 4px 10px; }
+  .error404 .search-form fieldset .search-submit {
+    margin-top: 0;
+    border: 0;
+    padding: 0;
+    padding-left: 5px; }
+
+/* Search - search.php */
+.search-results .page-header {
+  border-bottom: 1px dashed #fff; }
+
+/* Submit a Quote - page-submit.php */
+.quote-submission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .quote-submission .entry-header .entry-title {
+    margin-bottom: 0; }
+  .quote-submission .quote-submission-wrapper form div {
+    margin: 0.75rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .quote-submission .quote-submission-wrapper form div label {
+      margin: 0.75rem 0;
+      font-family: "Exo Web Bold", sans-serif; }
+    .quote-submission .quote-submission-wrapper form div input[type="text"],
+    .quote-submission .quote-submission-wrapper form div input[type="url"] {
+      width: 225px; }
+    .quote-submission .quote-submission-wrapper form div input[type="text"],
+    .quote-submission .quote-submission-wrapper form div input[type="url"],
+    .quote-submission .quote-submission-wrapper form div textarea {
+      cursor: default; }
 
 /*--------------------------------------------------------------
 # Media

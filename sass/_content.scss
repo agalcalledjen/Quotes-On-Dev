@@ -94,3 +94,81 @@
   margin-top: $base__space-unit * 3.5;
   margin-bottom: $base__space-unit;
 }
+
+/* 404 Page - 404.php */
+.error404 {
+  h1 {
+    margin-top: $base__space-unit;
+  }
+
+  .search-form {
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+
+      .search-field {
+        width: 250px;
+        padding: 4px 10px;
+      }
+
+      .search-submit {
+        margin-top: 0;
+        border: 0;
+        padding: 0;
+        padding-left: 5px;
+
+
+      }
+    }
+  }
+}
+
+/* Search - search.php */
+.search-results {
+  .page-header {
+    border-bottom: $border__dashed;
+  }
+}
+
+/* Submit a Quote - page-submit.php */
+.quote-submission {
+  display: flex;
+  flex-direction: column;
+
+  .entry-header {
+    .entry-title {
+      margin-bottom: 0;
+    }
+  }
+
+  .quote-submission-wrapper {
+
+
+
+
+    form {
+      div {
+        margin: 0.75rem 0;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin: 0.75rem 0;
+          font-family: $font__button;
+        }
+
+        input[type="text"],
+        input[type="url"] {
+          width: 225px;
+        }
+
+        input[type="text"],
+        input[type="url"],
+        textarea {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
