@@ -36,6 +36,10 @@ a {
   float: left;
   width: 100%;
 
+  @include tablet {
+    width: auto;
+  }
+
   ul {
     // display: none;
     list-style: none;
@@ -131,6 +135,10 @@ a {
 
   .main-navigation ul {
     display: block;
+
+    @include desktop {
+      display: flex;
+    }
   }
 }
 
@@ -154,5 +162,21 @@ a {
     float: right;
     text-align: right;
     width: 50%;
+  }
+}
+
+.number-pagination {
+
+  .page-numbers,
+  .page-numbers:first-child {
+    padding-right: $base__space-unit / 3;
+  }
+}
+
+.site-info {
+  a {
+    @include tablet {
+      white-space: pre-wrap;
+    }
   }
 }

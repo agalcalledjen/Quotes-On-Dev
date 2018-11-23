@@ -114,6 +114,7 @@
           content: quoteContent,
           _qod_quote_source: quoteSource,
           _qod_quote_source_url: quoteSourceUrl,
+          status: "publish"
         },
         // authentication
         beforeSend: function (xhr) {
@@ -123,7 +124,7 @@
         console.log(response);
         // 1. slideUp the form
         // 2. append a success msg
-        $('#quote-submission-form').slideUp('slow');
+        $('#quote-submission-form').slideUp(1000);
         $('.quote-submission').append('<br>Thanks, your quote submission was received!');
       }).fail(function () {
         // output a msg to the user saying sth went wrong

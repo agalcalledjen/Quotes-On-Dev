@@ -3,15 +3,51 @@
 --------------------------------------------------------------*/
 
 /* Container */
+// .container {
+//   width: $desktop-width;
+// }
 
 /* Header */
 .header-logo {
   width: 300px;
+
+  @include tablet {
+    width: 500px;
+  }
+
+  @include desktop {
+    width: 700px;
+  }
 }
 
 /* Footer */
-.site-footer {
+.site-footer,
+.page-template-about .site-footer {
   margin-top: $base__space-unit * 3;
+
+  @include tablet {
+    display: flex;
+
+    .site-info {
+      display: flex;
+      align-items: flex-end;
+
+      @include desktop {
+        align-items: center;
+        padding-right: $base__space-unit;
+      }
+
+      &:before {
+        content: "\007c";
+        display: inline-flex;
+        margin-right: $base__space-unit / 2;
+      }
+    }
+  }
+
+  @include desktop {
+    align-self: flex-end;
+  }
 }
 
 
@@ -23,6 +59,14 @@
 
 .hentry {
   margin: $base__space-unit * 1.7 0 $base__space-unit;
+
+  @include tablet {
+    margin-top: $base__space-unit;
+  }
+
+  @include desktop {
+    margin-bottom: $base__space-unit * 2;
+  }
 }
 
 .updated:not(.published) {
@@ -86,6 +130,16 @@
 
     li {
       margin-right: $base__space-unit * 0.75;
+
+      @include tablet {
+        font-size: $font__size * 1.25;
+      }
+
+      .tag-cloud-link {
+        @include tablet {
+          font-size: $font__size * 1.25 !important;
+        }
+      }
     }
   }
 }
@@ -100,7 +154,10 @@
   h1 {
     margin-top: $base__space-unit;
   }
+}
 
+.error404,
+.search-no-results {
   .search-form {
     fieldset {
       border: 0;
@@ -108,8 +165,12 @@
       padding: 0;
 
       .search-field {
-        width: 250px;
-        padding: 4px 10px;
+        width: 240px;
+        padding: 4px 8px;
+
+        @include tablet {
+          font-size: $font__size * 1.25;
+        }
       }
 
       .search-submit {
@@ -117,10 +178,12 @@
         border: 0;
         padding: 0;
         padding-left: 5px;
-
-
       }
     }
+  }
+
+  .site-footer {
+    margin-top: $base__space-unit * 4;
   }
 }
 
@@ -129,23 +192,32 @@
   .content-area {
     .site-main {
       .page-header {
-        border-bottom: $border__dashed;
+        border-bottom: $border__dotted;
       }
 
       .post {
+        margin-top: $base__space-unit;
+
         .entry-header {
           .entry-title {
             font-family: $font__button;
-          }
-        }
-
-        .entry-summary {
-          p {
-            font-size: $font__size;
+            font-size: $font__size * 1.5;
           }
         }
       }
     }
+  }
+}
+
+.search-no-results {
+  .page-content {
+    margin: $base__space-unit * 2.75 0 0;
+    padding-top: $base__space-unit;
+    border-top: $border__dotted;
+  }
+
+  .site-footer {
+    margin-top: $base__space-unit * 4.25;
   }
 }
 
@@ -155,9 +227,14 @@
   flex-direction: column;
 
   .entry-header {
+
     .entry-title {
       margin-bottom: 0;
     }
+  }
+
+  p {
+    margin-bottom: 0;
   }
 
   .quote-submission-wrapper {
@@ -176,6 +253,11 @@
         input[type="text"],
         input[type="url"] {
           width: 225px;
+
+          @include tablet {
+            width: 400px;
+            height: $base__space-unit * 1.7;
+          }
         }
 
         input[type="text"],
@@ -184,6 +266,69 @@
           cursor: default;
         }
       }
+    }
+  }
+}
+
+/* Single Post - single.php */
+.single-post {
+  p {
+    @include tablet {
+      margin-top: 0;
+      font-size: $font__size * 1.75;
+    }
+
+    @include desktop {
+      font-size: $font__size * 2.5;
+    }
+  }
+}
+
+/* Putting in the quotes */
+.hfeed {
+  @include desktop {
+    width: $desktop-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+}
+
+.site-content {
+
+  @include desktop {
+    display: flex;
+    margin-top: $base__space-unit * 1.7;
+  }
+
+  .content-area {
+    @include desktop {
+      max-width: 800px;
+      display: inline-flex;
+      padding: 0 $base__space-unit * 2.25;
+    }
+  }
+
+  &:before,
+  &:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $color__brand-green;
+    font-size: $font__size * 7;
+  }
+
+  &:before {
+    @include desktop {
+      content: "\f10d";
+    }
+  }
+
+  &:after {
+    @include desktop {
+      content: "\f10e";
+      display: inline-flex;
     }
   }
 }

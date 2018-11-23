@@ -26,6 +26,14 @@ h6 {
 
 h1 {
   margin-top: $base__space-unit * 1.75;
+
+  @include tablet {
+    margin-bottom: $base__space-unit;
+  }
+
+  @include desktop {
+    margin-top: $base__space-unit;
+  }
 }
 
 h2 {
@@ -37,12 +45,22 @@ h2 {
 
 p {
   margin-bottom: $base__space-unit;
-  font-size: 1.25rem;
+  font-size: $font__size;
 }
 
-.error404 {
+.home.blog {
   p {
-    font-size: $font__size;
+    font-size: $font__size * 1.25;
+
+    @include tablet {
+      font-size: $font__size * 1.75;
+      margin-top: $base__space-unit * 1.8;
+    }
+
+    @include desktop {
+      font-size: $font__size * 2.5;
+      margin-top: 0;
+    }
   }
 }
 

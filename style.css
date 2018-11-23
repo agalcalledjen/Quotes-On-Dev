@@ -276,6 +276,12 @@ h6 {
 
 h1 {
   margin-top: 2.625rem; }
+  @media (min-width: 620px) {
+    h1 {
+      margin-bottom: 1.5rem; } }
+  @media (min-width: 1080px) {
+    h1 {
+      margin-top: 1.5rem; } }
 
 h2 {
   font-size: 1.25rem;
@@ -284,10 +290,18 @@ h2 {
 /* Copy */
 p {
   margin-bottom: 1.5rem;
-  font-size: 1.25rem; }
-
-.error404 p {
   font-size: 16px; }
+
+.home.blog p {
+  font-size: 20px; }
+  @media (min-width: 620px) {
+    .home.blog p {
+      font-size: 28px;
+      margin-top: 2.7rem; } }
+  @media (min-width: 1080px) {
+    .home.blog p {
+      font-size: 40px;
+      margin-top: 0; } }
 
 dfn,
 cite,
@@ -351,6 +365,12 @@ body {
   /* Fallback for when there is no custom background color defined. */
   margin: 0 auto;
   padding: 3.75rem 0.75rem; }
+  @media (min-width: 620px) {
+    body {
+      padding: 3.75rem 1rem; } }
+  @media (min-width: 1080px) {
+    body {
+      padding: 4.725rem 1rem; } }
 
 blockquote,
 q {
@@ -415,6 +435,12 @@ input[type="submit"] {
   padding: 0.75rem 2.25rem;
   /* text-shadow: 0 1px 0 hsla(0,0%,100%,.8); */
   margin-top: 1.5rem; }
+  @media (min-width: 620px) {
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+      font-size: 20px; } }
   button:hover, button:active, button:focus,
   input[type="button"]:hover,
   input[type="button"]:active,
@@ -429,6 +455,12 @@ input[type="submit"] {
     color: #008e00;
     border-color: #008e00; }
 
+@media (min-width: 1080px) {
+  #new-quote-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; } }
+
 /* Fields */
 input[type="text"],
 input[type="email"],
@@ -436,7 +468,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
+  color: #fff;
   border: 1px solid #00cc00;
   border-width: 2px;
   border-radius: 3px;
@@ -460,7 +492,12 @@ input[type="search"] {
 
 textarea {
   padding-left: 3px;
-  width: 100%; }
+  width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab; }
+  @media (min-width: 620px) {
+    textarea {
+      height: 6.375rem; } }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -483,6 +520,9 @@ a {
   clear: both;
   float: left;
   width: 100%; }
+  @media (min-width: 620px) {
+    .main-navigation {
+      width: auto; } }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -542,6 +582,11 @@ a {
     display: none; }
   .main-navigation ul {
     display: block; } }
+  @media screen and (min-width: 768px) and (min-width: 1080px) {
+    .main-navigation ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -563,6 +608,14 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.number-pagination .page-numbers,
+.number-pagination .page-numbers:first-child {
+  padding-right: 0.5rem; }
+
+@media (min-width: 620px) {
+  .site-info a {
+    white-space: pre-wrap; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -628,10 +681,51 @@ a {
 /* Header */
 .header-logo {
   width: 300px; }
+  @media (min-width: 620px) {
+    .header-logo {
+      width: 500px; } }
+  @media (min-width: 1080px) {
+    .header-logo {
+      width: 700px; } }
 
 /* Footer */
-.site-footer {
+.site-footer,
+.page-template-about .site-footer {
   margin-top: 4.5rem; }
+  @media (min-width: 620px) {
+    .site-footer,
+    .page-template-about .site-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .site-footer .site-info,
+      .page-template-about .site-footer .site-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; } }
+    @media (min-width: 620px) and (min-width: 1080px) {
+      .site-footer .site-info,
+      .page-template-about .site-footer .site-info {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding-right: 1.5rem; } }
+  @media (min-width: 620px) {
+        .site-footer .site-info:before,
+        .page-template-about .site-footer .site-info:before {
+          content: "\007c";
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          margin-right: 0.75rem; } }
+  @media (min-width: 1080px) {
+    .site-footer,
+    .page-template-about .site-footer {
+      -ms-flex-item-align: end;
+          align-self: flex-end; } }
 
 /* Posts and pages */
 .sticky {
@@ -639,6 +733,12 @@ a {
 
 .hentry {
   margin: 2.55rem 0 1.5rem; }
+  @media (min-width: 620px) {
+    .hentry {
+      margin-top: 1.5rem; } }
+  @media (min-width: 1080px) {
+    .hentry {
+      margin-bottom: 3rem; } }
 
 .updated:not(.published) {
   display: none; }
@@ -693,6 +793,16 @@ a {
   .cat-archives ul li,
   .tag-archives ul li {
     margin-right: 1.125rem; }
+    @media (min-width: 620px) {
+      .post-archives ul li,
+      .cat-archives ul li,
+      .tag-archives ul li {
+        font-size: 20px; } }
+    @media (min-width: 620px) {
+      .post-archives ul li .tag-cloud-link,
+      .cat-archives ul li .tag-cloud-link,
+      .tag-archives ul li .tag-cloud-link {
+        font-size: 20px !important; } }
 
 .page .site-footer {
   margin-top: 5.25rem;
@@ -702,22 +812,47 @@ a {
 .error404 h1 {
   margin-top: 1.5rem; }
 
-.error404 .search-form fieldset {
+.error404 .search-form fieldset,
+.search-no-results .search-form fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
-  .error404 .search-form fieldset .search-field {
-    width: 250px;
-    padding: 4px 10px; }
-  .error404 .search-form fieldset .search-submit {
+  .error404 .search-form fieldset .search-field,
+  .search-no-results .search-form fieldset .search-field {
+    width: 240px;
+    padding: 4px 8px; }
+    @media (min-width: 620px) {
+      .error404 .search-form fieldset .search-field,
+      .search-no-results .search-form fieldset .search-field {
+        font-size: 20px; } }
+  .error404 .search-form fieldset .search-submit,
+  .search-no-results .search-form fieldset .search-submit {
     margin-top: 0;
     border: 0;
     padding: 0;
     padding-left: 5px; }
 
+.error404 .site-footer,
+.search-no-results .site-footer {
+  margin-top: 6rem; }
+
 /* Search - search.php */
-.search-results .page-header {
-  border-bottom: 1px dashed #fff; }
+.search-results .site-content .content-area .site-main .page-header {
+  border-bottom: 1px dotted #fff; }
+
+.search-results .site-content .content-area .site-main .post {
+  margin-top: 1.5rem; }
+  .search-results .site-content .content-area .site-main .post .entry-header .entry-title {
+    font-family: "Exo Web Bold", sans-serif;
+    font-size: 24px; }
+
+.search-no-results .page-content {
+  margin: 4.125rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px dotted #fff; }
+
+.search-no-results .site-footer {
+  margin-top: 6.375rem; }
 
 /* Submit a Quote - page-submit.php */
 .quote-submission {
@@ -729,6 +864,8 @@ a {
       -ms-flex-direction: column;
           flex-direction: column; }
   .quote-submission .entry-header .entry-title {
+    margin-bottom: 0; }
+  .quote-submission p {
     margin-bottom: 0; }
   .quote-submission .quote-submission-wrapper form div {
     margin: 0.75rem 0;
@@ -745,10 +882,74 @@ a {
     .quote-submission .quote-submission-wrapper form div input[type="text"],
     .quote-submission .quote-submission-wrapper form div input[type="url"] {
       width: 225px; }
+      @media (min-width: 620px) {
+        .quote-submission .quote-submission-wrapper form div input[type="text"],
+        .quote-submission .quote-submission-wrapper form div input[type="url"] {
+          width: 400px;
+          height: 2.55rem; } }
     .quote-submission .quote-submission-wrapper form div input[type="text"],
     .quote-submission .quote-submission-wrapper form div input[type="url"],
     .quote-submission .quote-submission-wrapper form div textarea {
       cursor: default; }
+
+/* Single Post - single.php */
+@media (min-width: 620px) {
+  .single-post p {
+    margin-top: 0;
+    font-size: 28px; } }
+
+@media (min-width: 1080px) {
+  .single-post p {
+    font-size: 40px; } }
+
+/* Putting in the quotes */
+@media (min-width: 1080px) {
+  .hfeed {
+    width: 1080px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* justify-content: center; */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+@media (min-width: 1080px) {
+  .site-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2.55rem; } }
+
+@media (min-width: 1080px) {
+  .site-content .content-area {
+    max-width: 800px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0 3.375rem; } }
+
+.site-content:before, .site-content:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #00cc00;
+  font-size: 112px; }
+
+@media (min-width: 1080px) {
+  .site-content:before {
+    content: "\f10d"; } }
+
+@media (min-width: 1080px) {
+  .site-content:after {
+    content: "\f10e";
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; } }
 
 /*--------------------------------------------------------------
 # Media

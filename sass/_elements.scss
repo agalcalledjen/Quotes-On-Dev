@@ -19,6 +19,14 @@ body {
   /* Fallback for when there is no custom background color defined. */
   margin: 0 auto;
   padding: $base__space-unit * 2.5 $base__space-unit / 2;
+
+  @include tablet {
+    padding: $base__space-unit * 2.5 $base__space-unit / 1.5;
+  }
+
+  @include desktop {
+    padding: $base__space-unit * 3.15 $base__space-unit / 1.5;
+  }
 }
 
 blockquote,
