@@ -87,4 +87,8 @@ textarea {
   @include tablet {
     height: $base__space-unit * 4.25;
   }
+
+  @include desktop {
+    max-width: $container - 100px;
+  }
 }

@@ -44,7 +44,8 @@ h2 {
 /* Copy */
 
 p {
-  margin-bottom: $base__space-unit;
+  // margin-bottom: $base__space-unit;
+  margin: $base__space-unit 0;
   font-size: $font__size;
 }
 

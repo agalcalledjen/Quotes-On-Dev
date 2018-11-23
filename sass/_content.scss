@@ -30,7 +30,8 @@
 
     .site-info {
       display: flex;
-      align-items: flex-end;
+      // align-items: flex-end;
+      align-items: center;
 
       @include desktop {
         align-items: center;
@@ -50,6 +51,10 @@
   }
 }
 
+.single-post .site-footer {
+  margin-top: $base__space-unit * 2;
+}
+
 
 /* Posts and pages */
 
@@ -67,6 +72,10 @@
   @include desktop {
     margin-bottom: $base__space-unit * 2;
   }
+}
+
+.tag .hentry {
+  margin: 0;
 }
 
 .updated:not(.published) {
@@ -144,15 +153,32 @@
   }
 }
 
+.tag-archives {
+  @include desktop {
+    margin-bottom: $base__space-unit * 3;
+  }
+}
+
 .page .site-footer {
   margin-top: $base__space-unit * 3.5;
   margin-bottom: $base__space-unit;
+
+  @include desktop {
+    margin-top: $base__space-unit;
+    margin-bottom: 0;
+  }
 }
 
 /* 404 Page - 404.php */
 .error404 {
   h1 {
     margin-top: $base__space-unit;
+  }
+
+  .error-404 {
+    @include desktop {
+      width: $container;
+    }
   }
 }
 
@@ -191,21 +217,71 @@
 .search-results .site-content {
   .content-area {
     .site-main {
+      .post {
+        margin-top: $base__space-unit;
+      }
+    }
+  }
+}
+
+.search-results .site-content,
+.category .site-content,
+.tag .site-content {
+  .content-area {
+    .site-main {
       .page-header {
         border-bottom: $border__dotted;
+
+        @include desktop {
+          width: $container - 100px;
+        }
       }
 
       .post {
-        margin-top: $base__space-unit;
-
         .entry-header {
           .entry-title {
             font-family: $font__button;
             font-size: $font__size * 1.5;
           }
         }
+
+        .entry-content {
+          p {
+            font-size: $font__size * 1.25;
+
+            @include tablet {
+              font-size: $font__size * 1.75;
+            }
+
+            @include desktop {
+              font-size: $font__size * 2.5;
+            }
+          }
+        }
       }
     }
+  }
+}
+
+.category .site-main,
+.tag .site-main {
+  .post {
+    padding-bottom: $base__space-unit * 2;
+    border-bottom: $border__dotted;
+
+    // &:last-child {
+    //   margin-bottom: $base__space-unit * 2;
+    // }
+
+    @include desktop {
+      margin-top: $base__space-unit * 1.75;
+    }
+  }
+}
+
+.search-results .site-footer {
+  @include desktop {
+    margin-top: $base__space-unit;
   }
 }
 
@@ -214,10 +290,18 @@
     margin: $base__space-unit * 2.75 0 0;
     padding-top: $base__space-unit;
     border-top: $border__dotted;
+
+    @include desktop {
+      width: $container - 100px;
+    }
   }
 
   .site-footer {
     margin-top: $base__space-unit * 4.25;
+
+    @include desktop {
+      margin-top: $base__space-unit * 2;
+    }
   }
 }
 
@@ -225,6 +309,11 @@
 .quote-submission {
   display: flex;
   flex-direction: column;
+
+  @include desktop {
+    width: $container;
+    margin-bottom: $base__space-unit * 2.5;
+  }
 
   .entry-header {
 
@@ -266,6 +355,10 @@
           cursor: default;
         }
       }
+
+      input[type="submit"] {
+        margin-top: $base__space-unit / 2;
+      }
     }
   }
 }
@@ -305,7 +398,7 @@
 
   .content-area {
     @include desktop {
-      max-width: 800px;
+      width: $container;
       display: inline-flex;
       padding: 0 $base__space-unit * 2.25;
     }

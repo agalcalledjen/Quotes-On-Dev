@@ -18,7 +18,7 @@
 				
         <div class="site-info">
           <span>Brought to you by</span>
-					<a href="<?php echo esc_url( 'https://nejmal.github.com/project-05' ); ?>"><?php printf( esc_html( ' Jennifer Lam' ) ); ?></a>
+					<a href="<?php echo esc_url( 'https://github.com/nejmal' ); ?>" target="_blank"><?php printf( esc_html( ' Jennifer Lam' ) ); ?></a>
 				</div><!-- .site-info -->
 			
       </footer><!-- #colophon -->

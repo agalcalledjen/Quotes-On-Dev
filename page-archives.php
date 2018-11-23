@@ -31,7 +31,7 @@ get_header(); ?>
 
             <!-- every time we loop thru this, we want to output a list item -->
             <li>
-              <a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </li>
 
             <?php endforeach; wp_reset_postdata(); ?>

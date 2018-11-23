@@ -27,7 +27,8 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+      <!-- <?php the_posts_navigation(); ?> -->
+      <?php qod_numbered_pagination(); ?>
 
 		<?php else : ?>
 

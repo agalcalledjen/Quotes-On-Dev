@@ -173,6 +173,10 @@ a {
   }
 }
 
+.category .number-pagination {
+  margin-top: $base__space-unit * 2;
+}
+
 .site-info {
   a {
     @include tablet {

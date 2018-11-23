@@ -58,26 +58,15 @@ function qod_modify_archives( $query ) {
 
   // modifying archives
   if( 
-    ( is_archive() ) && 
+    is_tag() && 
     !is_admin() && $query->is_main_query() ){
-      $query->set( 'post_per_page', 5 );
+      $query->set( 'posts_per_page', 10 );
+  } elseif (
+    is_archive() && 
+    !is_admin() && $query->is_main_query() ) {
+      $query->set( 'posts_per_page', 5 );
   }
 }
 // pre_get_posts runs before getting the actual posts
 add_action( 'pre_get_posts', 'qod_modify_archives' );
 
- /** 
- * Filter the Submit page title 
- * */ 
-function inhabitent_archive_product_title ( $title ){
-  // we don't want this to be applied to every archive on our page so we will use an else if stmt
-  if( is_post_type_archive('product') ){
-    $title = 'Shop Stuff';
-  } else if( is_tax('product_type') ){
-    // 
-    // %1$1 = token
-    $title = sprintf( '%1$1', single_term_title( '', false));
-  }
-  return $title;
-}
-add_filter('get_the_archive_title', 'inhabitent_archive_product_title'); 

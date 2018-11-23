@@ -22,11 +22,11 @@ get_header(); ?>
             <form name="quoteForm" id="quote-submission-form">
               <div>
                 <label for="quote-author">Author of Quote</label>
-                <input type="text" name="quote_author" id="quote-author">
+                <input type="text" name="quote_author" id="quote-author" required>
               </div>
               <div>
                 <label for="quote-content">Quote</label>
-                <textarea name="quote" id="quote-content" cols="20" rows="3"></textarea>
+                <textarea name="quote" id="quote-content" cols="20" rows="3" required></textarea>
               </div>
               <div>
                 <label for="quote-source">Where did you find this quote? (e.g. book name)</label>

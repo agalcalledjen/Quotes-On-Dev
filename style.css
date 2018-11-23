@@ -289,7 +289,7 @@ h2 {
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   font-size: 16px; }
 
 .home.blog p {
@@ -498,6 +498,9 @@ textarea {
   @media (min-width: 620px) {
     textarea {
       height: 6.375rem; } }
+  @media (min-width: 1080px) {
+    textarea {
+      max-width: 700px; } }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -613,6 +616,9 @@ a {
 .number-pagination .page-numbers:first-child {
   padding-right: 0.5rem; }
 
+.category .number-pagination {
+  margin-top: 3rem; }
+
 @media (min-width: 620px) {
   .site-info a {
     white-space: pre-wrap; } }
@@ -703,9 +709,9 @@ a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: flex-end; } }
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
     @media (min-width: 620px) and (min-width: 1080px) {
       .site-footer .site-info,
       .page-template-about .site-footer .site-info {
@@ -727,6 +733,9 @@ a {
       -ms-flex-item-align: end;
           align-self: flex-end; } }
 
+.single-post .site-footer {
+  margin-top: 3rem; }
+
 /* Posts and pages */
 .sticky {
   display: block; }
@@ -739,6 +748,9 @@ a {
   @media (min-width: 1080px) {
     .hentry {
       margin-bottom: 3rem; } }
+
+.tag .hentry {
+  margin: 0; }
 
 .updated:not(.published) {
   display: none; }
@@ -804,13 +816,25 @@ a {
       .tag-archives ul li .tag-cloud-link {
         font-size: 20px !important; } }
 
+@media (min-width: 1080px) {
+  .tag-archives {
+    margin-bottom: 4.5rem; } }
+
 .page .site-footer {
   margin-top: 5.25rem;
   margin-bottom: 1.5rem; }
+  @media (min-width: 1080px) {
+    .page .site-footer {
+      margin-top: 1.5rem;
+      margin-bottom: 0; } }
 
 /* 404 Page - 404.php */
 .error404 h1 {
   margin-top: 1.5rem; }
+
+@media (min-width: 1080px) {
+  .error404 .error-404 {
+    width: 800px; } }
 
 .error404 .search-form fieldset,
 .search-no-results .search-form fieldset {
@@ -837,22 +861,66 @@ a {
   margin-top: 6rem; }
 
 /* Search - search.php */
-.search-results .site-content .content-area .site-main .page-header {
-  border-bottom: 1px dotted #fff; }
-
 .search-results .site-content .content-area .site-main .post {
   margin-top: 1.5rem; }
-  .search-results .site-content .content-area .site-main .post .entry-header .entry-title {
-    font-family: "Exo Web Bold", sans-serif;
-    font-size: 24px; }
+
+.search-results .site-content .content-area .site-main .page-header,
+.category .site-content .content-area .site-main .page-header,
+.tag .site-content .content-area .site-main .page-header {
+  border-bottom: 1px dotted #fff; }
+  @media (min-width: 1080px) {
+    .search-results .site-content .content-area .site-main .page-header,
+    .category .site-content .content-area .site-main .page-header,
+    .tag .site-content .content-area .site-main .page-header {
+      width: 700px; } }
+
+.search-results .site-content .content-area .site-main .post .entry-header .entry-title,
+.category .site-content .content-area .site-main .post .entry-header .entry-title,
+.tag .site-content .content-area .site-main .post .entry-header .entry-title {
+  font-family: "Exo Web Bold", sans-serif;
+  font-size: 24px; }
+
+.search-results .site-content .content-area .site-main .post .entry-content p,
+.category .site-content .content-area .site-main .post .entry-content p,
+.tag .site-content .content-area .site-main .post .entry-content p {
+  font-size: 20px; }
+  @media (min-width: 620px) {
+    .search-results .site-content .content-area .site-main .post .entry-content p,
+    .category .site-content .content-area .site-main .post .entry-content p,
+    .tag .site-content .content-area .site-main .post .entry-content p {
+      font-size: 28px; } }
+  @media (min-width: 1080px) {
+    .search-results .site-content .content-area .site-main .post .entry-content p,
+    .category .site-content .content-area .site-main .post .entry-content p,
+    .tag .site-content .content-area .site-main .post .entry-content p {
+      font-size: 40px; } }
+
+.category .site-main .post,
+.tag .site-main .post {
+  padding-bottom: 3rem;
+  border-bottom: 1px dotted #fff; }
+  @media (min-width: 1080px) {
+    .category .site-main .post,
+    .tag .site-main .post {
+      margin-top: 2.625rem; } }
+
+@media (min-width: 1080px) {
+  .search-results .site-footer {
+    margin-top: 1.5rem; } }
 
 .search-no-results .page-content {
   margin: 4.125rem 0 0;
   padding-top: 1.5rem;
   border-top: 1px dotted #fff; }
+  @media (min-width: 1080px) {
+    .search-no-results .page-content {
+      width: 700px; } }
 
 .search-no-results .site-footer {
   margin-top: 6.375rem; }
+  @media (min-width: 1080px) {
+    .search-no-results .site-footer {
+      margin-top: 3rem; } }
 
 /* Submit a Quote - page-submit.php */
 .quote-submission {
@@ -863,6 +931,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (min-width: 1080px) {
+    .quote-submission {
+      width: 800px;
+      margin-bottom: 3.75rem; } }
   .quote-submission .entry-header .entry-title {
     margin-bottom: 0; }
   .quote-submission p {
@@ -891,6 +963,8 @@ a {
     .quote-submission .quote-submission-wrapper form div input[type="url"],
     .quote-submission .quote-submission-wrapper form div textarea {
       cursor: default; }
+  .quote-submission .quote-submission-wrapper form input[type="submit"] {
+    margin-top: 0.75rem; }
 
 /* Single Post - single.php */
 @media (min-width: 620px) {
@@ -928,7 +1002,7 @@ a {
 
 @media (min-width: 1080px) {
   .site-content .content-area {
-    max-width: 800px;
+    width: 800px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;

@@ -114,7 +114,7 @@
           content: quoteContent,
           _qod_quote_source: quoteSource,
           _qod_quote_source_url: quoteSourceUrl,
-          status: "publish"
+          status: "Pending"
         },
         // authentication
         beforeSend: function (xhr) {
