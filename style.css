@@ -433,7 +433,6 @@ input[type="submit"] {
   font-size: 1rem;
   line-height: 1;
   padding: 0.75rem 2.25rem;
-  /* text-shadow: 0 1px 0 hsla(0,0%,100%,.8); */
   margin-top: 1.5rem; }
   @media (min-width: 620px) {
     button,
@@ -528,12 +527,14 @@ a {
       width: auto; } }
   .main-navigation ul {
     list-style: none;
-    margin: 0;
     padding-left: 0;
     margin: 1rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    @media (min-width: 620px) {
+      .main-navigation ul {
+        margin: 0; } }
     .main-navigation ul ul {
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
               box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -616,8 +617,12 @@ a {
 .number-pagination .page-numbers:first-child {
   padding-right: 0.5rem; }
 
-.category .number-pagination {
+.category .number-pagination,
+.search-results .number-pagination {
   margin-top: 3rem; }
+
+.search-results .number-pagination {
+  margin-bottom: 3rem; }
 
 @media (min-width: 620px) {
   .site-info a {
@@ -683,7 +688,6 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/* Container */
 /* Header */
 .header-logo {
   width: 300px; }
@@ -708,16 +712,10 @@ a {
       .page-template-about .site-footer .site-info {
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; } }
+        display: flex; } }
     @media (min-width: 620px) and (min-width: 1080px) {
       .site-footer .site-info,
       .page-template-about .site-footer .site-info {
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
         padding-right: 1.5rem; } }
   @media (min-width: 620px) {
         .site-footer .site-info:before,
@@ -777,6 +775,129 @@ a {
   font-family: "Exo Italic", sans-serif;
   word-break: keep-all; }
 
+/* 404 Page - 404.php */
+.error404 h1 {
+  margin-top: 1.5rem; }
+
+@media (min-width: 1080px) {
+  .error404 .error-404 {
+    width: 800px; } }
+
+.error404 .search-form fieldset,
+.search-no-results .search-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+  .error404 .search-form fieldset .search-field,
+  .search-no-results .search-form fieldset .search-field {
+    width: 240px;
+    padding: 4px 8px; }
+    @media (min-width: 620px) {
+      .error404 .search-form fieldset .search-field,
+      .search-no-results .search-form fieldset .search-field {
+        font-size: 20px; } }
+  .error404 .search-form fieldset .search-submit,
+  .search-no-results .search-form fieldset .search-submit {
+    margin-top: 0;
+    border: 0;
+    padding: 0;
+    padding-left: 5px; }
+
+.error404 .site-footer,
+.search-no-results .site-footer {
+  margin-top: 6rem; }
+
+/* Search - search.php */
+.search-results .site-content .content-area .site-main .post {
+  margin-top: 1.5rem; }
+  @media (min-width: 1080px) {
+    .search-results .site-content .content-area .site-main .post {
+      margin-bottom: 1.5rem; } }
+
+.search-results .site-content .content-area .site-main .page-header,
+.category .site-content .content-area .site-main .page-header,
+.tag .site-content .content-area .site-main .page-header {
+  border-bottom: 1px dashed #fff; }
+  @media (min-width: 1080px) {
+    .search-results .site-content .content-area .site-main .page-header,
+    .category .site-content .content-area .site-main .page-header,
+    .tag .site-content .content-area .site-main .page-header {
+      width: 700px; } }
+
+.search-results .site-content .content-area .site-main .post .entry-header .entry-title,
+.category .site-content .content-area .site-main .post .entry-header .entry-title,
+.tag .site-content .content-area .site-main .post .entry-header .entry-title {
+  font-family: "Exo Web Bold", sans-serif;
+  font-size: 24px; }
+
+.search-results .site-content .content-area .site-main .post .entry-content p,
+.category .site-content .content-area .site-main .post .entry-content p,
+.tag .site-content .content-area .site-main .post .entry-content p {
+  font-size: 20px; }
+  @media (min-width: 620px) {
+    .search-results .site-content .content-area .site-main .post .entry-content p,
+    .category .site-content .content-area .site-main .post .entry-content p,
+    .tag .site-content .content-area .site-main .post .entry-content p {
+      font-size: 28px; } }
+  @media (min-width: 1080px) {
+    .search-results .site-content .content-area .site-main .post .entry-content p,
+    .category .site-content .content-area .site-main .post .entry-content p,
+    .tag .site-content .content-area .site-main .post .entry-content p {
+      font-size: 40px; } }
+
+.search-results .site-content .type-page .entry-header {
+  margin-top: 3rem; }
+  .search-results .site-content .type-page .entry-header .entry-title {
+    font-family: "Exo Web Bold", sans-serif;
+    font-size: 24px; }
+
+.category .site-main .post,
+.tag .site-main .post {
+  padding-bottom: 3rem;
+  border-bottom: 1px dashed #fff; }
+  @media (min-width: 1080px) {
+    .category .site-main .post,
+    .tag .site-main .post {
+      margin-top: 2.625rem; } }
+
+@media (min-width: 1080px) {
+  .search-results .site-footer {
+    margin-top: 1.5rem; } }
+
+.search-no-results .page-content {
+  margin: 4.125rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #fff; }
+  @media (min-width: 1080px) {
+    .search-no-results .page-content {
+      width: 700px; } }
+
+.search-no-results .site-footer {
+  margin-top: 6.375rem; }
+  @media (min-width: 1080px) {
+    .search-no-results .site-footer {
+      margin-top: 3rem; } }
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
 /* About Page - about.php */
 .page-template-about .entry-content p {
   font-size: 16px; }
@@ -827,100 +948,6 @@ a {
     .page .site-footer {
       margin-top: 1.5rem;
       margin-bottom: 0; } }
-
-/* 404 Page - 404.php */
-.error404 h1 {
-  margin-top: 1.5rem; }
-
-@media (min-width: 1080px) {
-  .error404 .error-404 {
-    width: 800px; } }
-
-.error404 .search-form fieldset,
-.search-no-results .search-form fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-  .error404 .search-form fieldset .search-field,
-  .search-no-results .search-form fieldset .search-field {
-    width: 240px;
-    padding: 4px 8px; }
-    @media (min-width: 620px) {
-      .error404 .search-form fieldset .search-field,
-      .search-no-results .search-form fieldset .search-field {
-        font-size: 20px; } }
-  .error404 .search-form fieldset .search-submit,
-  .search-no-results .search-form fieldset .search-submit {
-    margin-top: 0;
-    border: 0;
-    padding: 0;
-    padding-left: 5px; }
-
-.error404 .site-footer,
-.search-no-results .site-footer {
-  margin-top: 6rem; }
-
-/* Search - search.php */
-.search-results .site-content .content-area .site-main .post {
-  margin-top: 1.5rem; }
-
-.search-results .site-content .content-area .site-main .page-header,
-.category .site-content .content-area .site-main .page-header,
-.tag .site-content .content-area .site-main .page-header {
-  border-bottom: 1px dotted #fff; }
-  @media (min-width: 1080px) {
-    .search-results .site-content .content-area .site-main .page-header,
-    .category .site-content .content-area .site-main .page-header,
-    .tag .site-content .content-area .site-main .page-header {
-      width: 700px; } }
-
-.search-results .site-content .content-area .site-main .post .entry-header .entry-title,
-.category .site-content .content-area .site-main .post .entry-header .entry-title,
-.tag .site-content .content-area .site-main .post .entry-header .entry-title {
-  font-family: "Exo Web Bold", sans-serif;
-  font-size: 24px; }
-
-.search-results .site-content .content-area .site-main .post .entry-content p,
-.category .site-content .content-area .site-main .post .entry-content p,
-.tag .site-content .content-area .site-main .post .entry-content p {
-  font-size: 20px; }
-  @media (min-width: 620px) {
-    .search-results .site-content .content-area .site-main .post .entry-content p,
-    .category .site-content .content-area .site-main .post .entry-content p,
-    .tag .site-content .content-area .site-main .post .entry-content p {
-      font-size: 28px; } }
-  @media (min-width: 1080px) {
-    .search-results .site-content .content-area .site-main .post .entry-content p,
-    .category .site-content .content-area .site-main .post .entry-content p,
-    .tag .site-content .content-area .site-main .post .entry-content p {
-      font-size: 40px; } }
-
-.category .site-main .post,
-.tag .site-main .post {
-  padding-bottom: 3rem;
-  border-bottom: 1px dotted #fff; }
-  @media (min-width: 1080px) {
-    .category .site-main .post,
-    .tag .site-main .post {
-      margin-top: 2.625rem; } }
-
-@media (min-width: 1080px) {
-  .search-results .site-footer {
-    margin-top: 1.5rem; } }
-
-.search-no-results .page-content {
-  margin: 4.125rem 0 0;
-  padding-top: 1.5rem;
-  border-top: 1px dotted #fff; }
-  @media (min-width: 1080px) {
-    .search-no-results .page-content {
-      width: 700px; } }
-
-.search-no-results .site-footer {
-  margin-top: 6.375rem; }
-  @media (min-width: 1080px) {
-    .search-no-results .site-footer {
-      margin-top: 3rem; } }
 
 /* Submit a Quote - page-submit.php */
 .quote-submission {
@@ -988,7 +1015,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    /* justify-content: center; */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; } }
@@ -1024,26 +1050,3 @@ a {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex; } }
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
-
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* All Archives Page */
-/* Submit a Quote Page */

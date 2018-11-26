@@ -2,6 +2,180 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* All Archives Page */
 
-/* Submit a Quote Page */
+/* About Page - about.php */
+.page-template-about .entry-content {
+  p {
+    font-size: $font__size;
+  }
+}
+
+/* Archives Page - page-archives.php */
+.post-archives,
+.cat-archives,
+.tag-archives {
+  h2 {
+    margin-top: $base__space-unit * 1.9;
+    font-size: $font__size * 1.5;
+    font-family: $font__button;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 2;
+
+    li {
+      margin-right: $base__space-unit * 0.75;
+
+      @include tablet {
+        font-size: $font__size * 1.25;
+      }
+
+      .tag-cloud-link {
+        @include tablet {
+          font-size: $font__size * 1.25 !important;
+        }
+      }
+    }
+  }
+}
+
+.tag-archives {
+  @include desktop {
+    margin-bottom: $base__space-unit * 3;
+  }
+}
+
+.page .site-footer {
+  margin-top: $base__space-unit * 3.5;
+  margin-bottom: $base__space-unit;
+
+  @include desktop {
+    margin-top: $base__space-unit;
+    margin-bottom: 0;
+  }
+}
+
+/* Submit a Quote - page-submit.php */
+.quote-submission {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    width: $container;
+    margin-bottom: $base__space-unit * 2.5;
+  }
+
+  .entry-header {
+
+    .entry-title {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .quote-submission-wrapper {
+
+    form {
+      div {
+        margin: 0.75rem 0;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin: 0.75rem 0;
+          font-family: $font__button;
+        }
+
+        input[type="text"],
+        input[type="url"] {
+          width: 225px;
+
+          @include tablet {
+            width: 400px;
+            height: $base__space-unit * 1.7;
+          }
+        }
+
+        input[type="text"],
+        input[type="url"],
+        textarea {
+          cursor: default;
+        }
+      }
+
+      input[type="submit"] {
+        margin-top: $base__space-unit / 2;
+      }
+    }
+  }
+}
+
+/* Single Post - single.php */
+.single-post {
+  p {
+    @include tablet {
+      margin-top: 0;
+      font-size: $font__size * 1.75;
+    }
+
+    @include desktop {
+      font-size: $font__size * 2.5;
+    }
+  }
+}
+
+/* Putting in the quotes */
+.hfeed {
+  @include desktop {
+    width: $desktop-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.site-content {
+
+  @include desktop {
+    display: flex;
+    margin-top: $base__space-unit * 1.7;
+  }
+
+  .content-area {
+    @include desktop {
+      width: $container;
+      display: inline-flex;
+      padding: 0 $base__space-unit * 2.25;
+    }
+  }
+
+  &:before,
+  &:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $color__brand-green;
+    font-size: $font__size * 7;
+  }
+
+  &:before {
+    @include desktop {
+      content: "\f10d";
+    }
+  }
+
+  &:after {
+    @include desktop {
+      content: "\f10e";
+      display: inline-flex;
+    }
+  }
+}

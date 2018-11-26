@@ -45,28 +45,37 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
  * Filter the Post Archives including the default blog loop
  */
 function qod_modify_archives( $query ) {
-  // use if stmt to modify only homepage, single post and to make sure it's the main query
-  // we don't want it to mess with other queries
   if( is_home() || is_single() && !is_admin() && $query->is_main_query ){
-    // if those conditions are met, order posts randomly
     $query->set( 'orderby', 'rand' );
-    // if those if conditions are met, only show one post
     $query->set( 'posts_per_page', 1 );
-    // optional, order by ascending
     $query->set( 'order', 'ASC' );
   }
 
   // modifying archives
-  if( 
-    is_tag() && 
-    !is_admin() && $query->is_main_query() ){
-      $query->set( 'posts_per_page', 10 );
-  } elseif (
+ 
+  if (
     is_archive() && 
     !is_admin() && $query->is_main_query() ) {
       $query->set( 'posts_per_page', 5 );
   }
+
+  if( 
+    is_search() && 
+    !is_admin() && $query->is_main_query() ){
+      $query->set( 'posts_per_page', 10 );
+  }
+
 }
-// pre_get_posts runs before getting the actual posts
 add_action( 'pre_get_posts', 'qod_modify_archives' );
+
+/**
+ * Remove pages from search results
+ */ 
+function qod_modify_search($query) {
+  if ( $query->is_main_query() && is_search() && !is_admin()) {
+      $query->set( 'post_type', 'post' );
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts','qod_modify_search' );
 

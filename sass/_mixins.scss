@@ -19,12 +19,6 @@
   }
 }
 
-@mixin flex($flex-drtn: column, $justify: center, $align: center) {
-  flex-direction: $flex-drtn;
-  justify-content: $justify;
-  align-items: $align;
-}
-
 // Center block
 @mixin center-block {
   display: block;

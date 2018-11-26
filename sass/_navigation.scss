@@ -32,7 +32,6 @@ a {
 
 .main-navigation {
   clear: both;
-  // display: block;
   float: left;
   width: 100%;
 
@@ -41,12 +40,14 @@ a {
   }
 
   ul {
-    // display: none;
     list-style: none;
-    margin: 0;
     padding-left: 0;
     margin: 1rem 0;
     display: flex;
+
+    @include tablet {
+      margin: 0;
+    }
 
     ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -173,8 +174,13 @@ a {
   }
 }
 
-.category .number-pagination {
+.category .number-pagination,
+.search-results .number-pagination {
   margin-top: $base__space-unit * 2;
+}
+
+.search-results .number-pagination {
+  margin-bottom: $base__space-unit * 2;
 }
 
 .site-info {
