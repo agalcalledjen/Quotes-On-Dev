@@ -4,8 +4,6 @@
 
     let lastPage = '';
     const $post = $('.post');
-    const quote = data[0];
-    const $source = $('.source');
 
     // get a random post and append content to the DOM
     $('#new-quote-btn').on('click', function (event) {
@@ -26,21 +24,24 @@
 
         $post.append(
           `<div class="entry-content">
-            ${quote.content.rendered}
+            ${data[0].content.rendered}
           </div>
           <div class="entry-meta">
-            <h2 class="entry-title">&mdash; ${quote.title.rendered}</h2>
+            <h2 class="entry-title">&mdash; ${data[0].title.rendered}</h2>
             <span class="source">  
             </span>
           </div>`);
 
-        if (quote._qod_quote_source_url.length > 0) {
-          $source.append(`&nbsp;,<a href="${quote._qod_quote_source_url}">&nbsp;${quote._qod_quote_source}</a>`);
-        } else if (quote._qod_quote_source.length > 0) {
-          $source.append(`&nbsp;, ${quote._qod_quote_source}`);
+        if (data[0]._qod_quote_source_url.length > 0) {
+          $('.source').append(`&nbsp;,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`);
+        } else if (data[0]._qod_quote_source.length > 0) {
+          $('.source').append(`&nbsp;, ${data[0]._qod_quote_source}`);
         } else {
-          $source.append(quote._qod_quote_source);
+          $('.source').append(data[0]._qod_quote_source);
         }
+
+        // could use this instead of data[0] every time
+        const quote = data[0];
 
         history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
 
@@ -79,7 +80,8 @@
         beforeSend: function (xhr) {
           xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
         }
-      }).done(function () {
+      }).done(function (response) {
+        console.log(response);
         $('#quote-submission-form').slideUp(1000);
         $('.quote-submission').append('<br>Thanks, your quote submission was received!');
       }).fail(function () {
