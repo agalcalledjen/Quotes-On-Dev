@@ -1,8 +1,11 @@
 (function ($) {
 
-  $(document).ready(function () {
+  $(function () {
 
     let lastPage = '';
+    const $post = $('.post');
+    const quote = data[0];
+    const $source = $('.source');
 
     // get a random post and append content to the DOM
     $('#new-quote-btn').on('click', function (event) {
@@ -19,28 +22,25 @@
         method: 'GET',
         url: qod_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
       }).done(function (data) {
-        $('.post').empty();
+        $post.empty();
 
-        $('.post').append(
+        $post.append(
           `<div class="entry-content">
-            ${data[0].content.rendered}
+            ${quote.content.rendered}
           </div>
           <div class="entry-meta">
-            <h2 class="entry-title">&mdash; ${data[0].title.rendered}</h2>
+            <h2 class="entry-title">&mdash; ${quote.title.rendered}</h2>
             <span class="source">  
             </span>
           </div>`);
 
-        if (data[0]._qod_quote_source_url.length > 0) {
-          $('.source').append(`&nbsp;,<a href="${data[0]._qod_quote_source_url}">&nbsp;${data[0]._qod_quote_source}</a>`);
-        } else if (data[0]._qod_quote_source.length > 0) {
-          $('.source').append(`&nbsp;, ${data[0]._qod_quote_source}`);
+        if (quote._qod_quote_source_url.length > 0) {
+          $source.append(`&nbsp;,<a href="${quote._qod_quote_source_url}">&nbsp;${quote._qod_quote_source}</a>`);
+        } else if (quote._qod_quote_source.length > 0) {
+          $source.append(`&nbsp;, ${quote._qod_quote_source}`);
         } else {
-          $('.source').append(data[0]._qod_quote_source);
+          $source.append(quote._qod_quote_source);
         }
-
-        // could use this instead of data[0] every time
-        const quote = data[0];
 
         history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
 
@@ -52,7 +52,6 @@
     $(window).on('popstate', function () {
       window.location.replace(lastPage);
     });
-
 
     // submit the form and create a new quote post
     $('#quote-submission-form').on('submit', function (event) {
@@ -80,8 +79,7 @@
         beforeSend: function (xhr) {
           xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
         }
-      }).done(function (response) {
-        console.log(response);
+      }).done(function () {
         $('#quote-submission-form').slideUp(1000);
         $('.quote-submission').append('<br>Thanks, your quote submission was received!');
       }).fail(function () {

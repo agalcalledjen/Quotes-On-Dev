@@ -18,7 +18,7 @@ This is a project produced from the following lesson from Week 8:
 
 Then add me to your `wp-content/themes` directory.
 
-### 2. Rename the `quotes-on-dev` directory
+### 2. Rename the `project-05-master` directory
 
 Make sure that the theme directory name is project appropriate! 
 
