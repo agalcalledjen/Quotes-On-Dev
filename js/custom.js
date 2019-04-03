@@ -4,6 +4,7 @@
 
     let lastPage = '';
     const $post = $('.post');
+    const $quoteForm = $('#quote-submission-form');
 
     // get a random post and append content to the DOM
     $('#new-quote-btn').on('click', function (event) {
@@ -45,8 +46,8 @@
 
         history.pushState(null, null, qod_vars.home_url + '/' + quote.slug);
 
-      }).fail(function (err) {
-        alert(err);
+      }).fail(function () {
+        alert('Oops!');
       });
     } // end of getQuote fx
 
@@ -55,7 +56,7 @@
     });
 
     // submit the form and create a new quote post
-    $('#quote-submission-form').on('submit', function (event) {
+    $quoteForm.on('submit', function (event) {
       event.preventDefault();
       postQuote();
     });
@@ -82,10 +83,10 @@
         }
       }).done(function (response) {
         console.log(response);
-        $('#quote-submission-form').slideUp(1000);
+        $quoteForm.slideUp(1000);
         $('.quote-submission').append('<br>Thanks, your quote submission was received!');
       }).fail(function () {
-        alert('something went wrong');
+        $('.entry-header').append('<br><h2>Something went wrong!</h2>');
       });
     } // end of postQuote fx
 

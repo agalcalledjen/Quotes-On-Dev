@@ -1,51 +1,41 @@
-# Quotes on Dev Starter
+# Quotes on Dev (WordPress Theme) 💬
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+A website that uses JavaScript and WordPress for functionality and it also uses the WordPress REST API. It uses WordPress as a content management system.
 
-This is a project produced from the following lesson from Week 8:
-
-1. Ajax in WordPress & WP Rest API
+(The WordPress starter theme for the Quotes on Dev project is for RED Academy students and it was forked from Underscores.)
 
 ---
 
 ![Image of Quotes On Dev Theme](https://github.com/nejmal/project-05/blob/master/screenshot.png)
 
+![Image of Quotes On Dev Theme](https://github.com/nejmal/project-05/blob/master/quotesondev.png)
+
 ---
 
 ## Installation
 
-### 1. Download me (don't clone me!)
+Download and do not clone.
 
-Then add me to your `wp-content/themes` directory.
+Add < project > to your `wp-content` directory.
 
-### 2. Rename the `project-05-master` directory
+Rename the project directory, if needed and make sure that the theme directory name is project appropriate.
 
-Make sure that the theme directory name is project appropriate! 
+Install dependencies inside of theme directory.
 
-### 3. Install the dev dependencies
+```
+npm install
+```
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
-
-And now would be a good time to `git init` :)
+Update the proxy in `gulpfile.js` with the appropriate URL for the Browsersync (change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
 
 ---
 
 ## Technologies Used
+
 - HTML
 - CSS
 - JavaScript
   - jQuery
-- Git
-- GitHub
-- Terminal
-  - Homebrew
-- Node.js
-  - npm
-  - Gulp
 - MAMP
 - WordPress
   - Plugins:
@@ -57,9 +47,25 @@ And now would be a good time to `git init` :)
     - Query Monitor
     - Theme Check
     - WP Migrate DB
+
 ---
 
 ## Personal Learnings
+
+### Web Developer (Project 5)
+
+This is a project produced from the following lesson from Week 8:
+
+1. Ajax in WordPress & WP Rest API
+
 Below are the subsequent learning outcomes.
 
-I learned that if I cannot see which WordPress template I am currently viewing for styling, I can still use the Dev Tools to find page specific elements to style. 
+I learned that if I cannot see which WordPress template I am currently viewing for styling, I can still use the Dev Tools to find page specific elements to style.
+
+---
+
+## Author
+
+[Jennifer Lam](https://github.com/nejmal), Full-Stack Developer student at [RED Academy](https://redacademy.com/vancouver/).
+
+Let's connect on [LinkedIn](https://www.linkedin.com/in/jenniferlam-/).
