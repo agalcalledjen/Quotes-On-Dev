@@ -1,6 +1,6 @@
 # Quotes on Dev (WordPress Theme) 💬
 
-A website that uses JavaScript and WordPress for functionality and it also uses the WordPress REST API. It uses WordPress as a content management system.
+A mobile-first responsive website that uses JavaScript and WordPress for functionality and it also uses the WordPress REST API. It uses WordPress as a content management system.
 
 (The WordPress starter theme for the Quotes on Dev project is for RED Academy students and it was forked from Underscores.)
 
