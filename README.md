@@ -37,6 +37,7 @@ Update the proxy in `gulpfile.js` with the appropriate URL for the Browsersync (
 - JavaScript
   - jQuery
 - MAMP
+- PHP
 - WordPress
   - Plugins:
     - Show Current Template
