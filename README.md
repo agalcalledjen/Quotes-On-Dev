@@ -6,9 +6,9 @@ A mobile-first responsive website that uses JavaScript and WordPress for functio
 
 ---
 
-![Image of Quotes On Dev Theme](https://github.com/agalcalledjen/project-05/blob/master/screenshot.png)
+![Image of Quotes On Dev Theme](https://github.com/agalcalledjen/quotes-on-dev/blob/master/screenshot.png)
 
-![Image of Quotes On Dev Theme](https://github.com/agalcalledjen/project-05/blob/master/quotesondev.png)
+![Image of Quotes On Dev Theme](https://github.com/agalcalledjen/quotes-on-dev/blob/master/quotesondev.png)
 
 ---
 
