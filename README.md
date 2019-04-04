@@ -6,9 +6,9 @@ A mobile-first responsive website that uses JavaScript and WordPress for functio
 
 ---
 
-![Image of Quotes On Dev Theme](https://github.com/nejmal/project-05/blob/master/screenshot.png)
+![Image of Quotes On Dev Theme](https://github.com/agalcalledjen/project-05/blob/master/screenshot.png)
 
-![Image of Quotes On Dev Theme](https://github.com/nejmal/project-05/blob/master/quotesondev.png)
+![Image of Quotes On Dev Theme](https://github.com/agalcalledjen/project-05/blob/master/quotesondev.png)
 
 ---
 
@@ -68,4 +68,4 @@ I learned that if I cannot see which WordPress template I am currently viewing f
 
 [Jennifer Lam](https://github.com/agalcalledjen), Full-Stack Developer student at [RED Academy](https://redacademy.com/vancouver/).
 
-Let's connect on [LinkedIn](https://www.linkedin.com/in/jenniferlam-/).
+Let's connect on [LinkedIn](https://www.linkedin.com/in/agalcalledjen/).
